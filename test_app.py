@@ -15,7 +15,7 @@ class SalesDataTestCase(unittest.TestCase):
 
     def test_highest_region(self):
         response = self.app.get('/highest_region')
-        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.status_code, 200)
         data = response.get_json()
         self.assertIn('region', data)
         self.assertIn('total_sales', data)
